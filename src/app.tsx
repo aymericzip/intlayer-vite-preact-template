@@ -1,17 +1,18 @@
-import type { FunctionalComponent } from 'preact';
-import { useIntlayer } from 'preact-intlayer';
-import { useState } from 'preact/hooks';
-import './app.css';
-import preactLogo from './assets/preact.svg';
-import { LocaleSwitcher } from './components/LocaleSwitcher';
-import { useI18nHTMLAttributes } from './hooks/useI18nHTMLAttributes';
-import { LocaleRouter } from './Router';
-import viteLogo from '/vite.svg';
+import type { FunctionalComponent } from "preact";
+import { useIntlayer } from "preact-intlayer";
+import { Suspense } from "preact/compat";
+import { useState } from "preact/hooks";
+import "./app.css";
+import preactLogo from "./assets/preact.svg";
+import { LocaleSwitcher } from "./components/LocaleSwitcher";
+import { useI18nHTMLAttributes } from "./hooks/useI18nHTMLAttributes";
+import { LocaleRouter } from "./Router";
+import viteLogo from "/vite.svg";
 
 const AppContent: FunctionalComponent = () => {
   useI18nHTMLAttributes();
   const [count, setCount] = useState(0);
-  const content = useIntlayer('app');
+  const content = useIntlayer("app");
 
   return (
     <div className="flex flex-col items-center gap-6 w-xl">
@@ -41,6 +42,8 @@ const AppContent: FunctionalComponent = () => {
 
 export const App: FunctionalComponent = () => (
   <LocaleRouter>
-    <AppContent />
+    <Suspense fallback={<div>loading dynamic dictionaries...</div>}>
+      <AppContent />
+    </Suspense>
   </LocaleRouter>
 );

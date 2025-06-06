@@ -1,4 +1,4 @@
-import { Locales, type IntlayerConfig } from 'intlayer';
+import { Locales, type IntlayerConfig } from "intlayer";
 
 const config: IntlayerConfig = {
   internationalization: {
@@ -12,12 +12,16 @@ const config: IntlayerConfig = {
   },
   editor: {
     enabled: true,
-    applicationURL: 'http://localhost:5173',
-    cmsURL: 'http://localhost:3000',
-    editorURL: 'http://localhost:8000',
-    backendURL: 'http://localhost:3100',
+    applicationURL: "http://localhost:5173",
+    cmsURL: "http://localhost:3000",
+    editorURL: "http://localhost:8000",
+    backendURL: "http://localhost:3100",
     clientId: process.env.INTLAYER_CLIENT_ID,
     clientSecret: process.env.INTLAYER_CLIENT_SECRET,
+  },
+  build: {
+    // optimize: true, // Enable babel macro dictionary replacement for bundle size optimization (default: process.env.NODE_ENV === "production")
+    // activateDynamicImport: true, // Enable dynamic import for dictionaries. Will make intervince suspense for loading dictionaries
   },
 };
 
