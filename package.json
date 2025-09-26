@@ -10,18 +10,18 @@
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "latest",
-    "preact": "^10.26.4",
-    "preact-intlayer": "latest",
-    "preact-iso": "^2.9.1"
+    "intlayer": "^6.1.1",
+    "preact": "^10.27.2",
+    "preact-intlayer": "^6.1.1",
+    "preact-iso": "^2.10.0"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.10.1",
-    "@tailwindcss/vite": "^4.0.14",
-    "intlayer-editor": "latest",
-    "tailwindcss": "^4.0.14",
-    "typescript": "~5.7.2",
-    "vite": "^6.3.1",
-    "vite-intlayer": "latest"
+    "@preact/preset-vite": "^2.10.2",
+    "@tailwindcss/vite": "^4.1.13",
+    "intlayer-editor": "^6.1.1",
+    "tailwindcss": "^4.1.13",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.6",
+    "vite-intlayer": "^6.1.1"
   }
 }
