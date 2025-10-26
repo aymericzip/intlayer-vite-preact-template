@@ -1,6 +1,6 @@
-import { getHTMLTextDir } from 'intlayer';
-import { useLocale } from 'preact-intlayer';
-import { useEffect } from 'preact/hooks';
+import { getHTMLTextDir } from "intlayer";
+import { useEffect } from "preact/hooks";
+import { useLocale } from "preact-intlayer";
 
 /**
  * Updates the HTML <html> element's `lang` and `dir` attributes based on the current locale.
@@ -10,13 +10,13 @@ import { useEffect } from 'preact/hooks';
  * This dynamic update is essential for proper text rendering, accessibility, and SEO.
  */
 export const useI18nHTMLAttributes = () => {
-  const { locale } = useLocale();
+	const { locale } = useLocale();
 
-  useEffect(() => {
-    // Update the language attribute to the current locale.
-    document.documentElement.lang = locale;
+	useEffect(() => {
+		// Update the language attribute to the current locale.
+		document.documentElement.lang = locale;
 
-    // Set the text direction based on the current locale.
-    document.documentElement.dir = getHTMLTextDir(locale);
-  }, [locale]);
+		// Set the text direction based on the current locale.
+		document.documentElement.dir = getHTMLTextDir(locale);
+	}, [locale]);
 };
