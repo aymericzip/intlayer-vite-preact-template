@@ -10,18 +10,18 @@
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "^7.0.1",
+    "intlayer": "latest",
     "preact": "^10.27.2",
-    "preact-intlayer": "^7.0.1",
+    "preact-intlayer": "^latest",
     "preact-iso": "^2.10.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
     "@tailwindcss/vite": "^4.1.13",
-    "intlayer-editor": "^7.0.1",
+    "intlayer-editor": "latest",
     "tailwindcss": "^4.1.13",
     "typescript": "~5.9.2",
     "vite": "^7.1.6",
-    "vite-intlayer": "^7.0.1"
+    "vite-intlayer": "latest"
   }
 }
