@@ -10,7 +10,7 @@
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "latest",
+    "intlayer": "8.0.0-canary.5",
     "preact": "^10.27.2",
     "preact-intlayer": "latest",
     "preact-iso": "^2.10.0"
@@ -22,6 +22,6 @@
     "tailwindcss": "^4.1.13",
     "typescript": "~5.9.2",
     "vite": "^7.1.6",
-    "vite-intlayer": "latest"
+    "vite-intlayer": "8.0.0-canary.5"
   }
 }
