@@ -17,10 +17,10 @@ const AppContent: FunctionalComponent = () => {
   return (
     <div className="flex flex-col items-center gap-6 w-xl">
       <div class="flex justify-evenly w-full my-5">
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank noopener">
           <img src={viteLogo} class="h-28" alt={content.viteLogo.value} />
         </a>
-        <a href="https://preactjs.com" target="_blank">
+        <a href="https://preactjs.com" target="_blank noopener">
           <img
             src={preactLogo}
             class="h-28 preact"

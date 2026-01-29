@@ -1,11 +1,10 @@
-import { getLocalizedUrl } from 'intlayer';
-import type { JSX } from 'preact';
-import { useLocale } from 'preact-intlayer';
-import { useLocation } from 'preact-iso';
-import { forwardRef } from 'preact/compat';
+import { getLocalizedUrl } from "intlayer";
+import type { HTMLAttributes, TargetedMouseEvent } from "preact";
+import { useLocale } from "preact-intlayer";
+import { useLocation } from "preact-iso";
+import { forwardRef } from "preact/compat";
 
-export interface LocalizedLinkProps
-  extends JSX.HTMLAttributes<HTMLAnchorElement> {
+export interface LocalizedLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   href: string;
   replace?: boolean;
 }
@@ -15,7 +14,7 @@ export interface LocalizedLinkProps
  * If the URL starts with http:// or https://, it's considered external.
  */
 export const checkIsExternalLink = (href?: string): boolean =>
-  /^https?:\/\//.test(href ?? '');
+  /^https?:\/\//.test(href ?? "");
 
 /**
  * A custom Link component that adapts the href attribute based on the current locale.
@@ -32,7 +31,7 @@ export const LocalizedLink = forwardRef<HTMLAnchorElement, LocalizedLinkProps>(
     const hrefI18n =
       href && !isExternalLink ? getLocalizedUrl(href, locale) : href;
 
-    const handleClick = (event: JSX.TargetedMouseEvent<HTMLAnchorElement>) => {
+    const handleClick = (event: TargetedMouseEvent<HTMLAnchorElement>) => {
       if (onClick) {
         onClick(event);
       }
@@ -57,5 +56,5 @@ export const LocalizedLink = forwardRef<HTMLAnchorElement, LocalizedLinkProps>(
         {children}
       </a>
     );
-  }
+  },
 );

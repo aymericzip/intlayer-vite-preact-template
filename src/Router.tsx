@@ -16,10 +16,7 @@ export const LocaleRouter: FunctionalComponent<{
         <Route
           path={`${urlPrefix}/:rest*`}
           component={() => (
-            <IntlayerProvider locale={locale}>
-              {locale}
-              {children}
-            </IntlayerProvider>
+            <IntlayerProvider locale={locale}>{children}</IntlayerProvider>
           )}
         />
       ))}

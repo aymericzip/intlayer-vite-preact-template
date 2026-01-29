@@ -1,11 +1,11 @@
-import { getLocaleName, getLocalizedUrl } from 'intlayer';
-import type { FunctionComponent } from 'preact';
-import { useIntlayer, useLocale } from 'preact-intlayer';
-import { useLocation } from 'preact-iso';
+import { getLocaleName, getLocalizedUrl } from "intlayer";
+import type { FunctionComponent } from "preact";
+import { useIntlayer, useLocale } from "preact-intlayer";
+import { useLocation } from "preact-iso";
 
 export const LocaleSwitcher: FunctionComponent = () => {
   const location = useLocation();
-  const content = useIntlayer('lang-switcher');
+  const content = useIntlayer("lang-switcher");
   const { availableLocales, setLocale } = useLocale({
     onLocaleChange: (newLocale) => {
       const currentFullPath = location.url; // preact-iso provides the full url
@@ -20,7 +20,7 @@ export const LocaleSwitcher: FunctionComponent = () => {
 
   return (
     <div aria-label={content.langSwitcherLabel.value}>
-      <div className="separator flex gap-4 min-w-[100px] mt-10 items-end divide-y divide-dashed p-1">
+      <div className="separator flex gap-4 min-w-25 mt-10 items-end divide-y divide-dashed p-1">
         {availableLocales.map((lang) => (
           <button
             key={lang}
