@@ -10,15 +10,15 @@
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "latest",
+    "intlayer": "canary",
     "preact": "^10.27.2",
-    "preact-intlayer": "latest",
+    "preact-intlayer": "canary",
     "preact-iso": "^2.10.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
     "@tailwindcss/vite": "^4.1.13",
-    "intlayer-editor": "latest",
+    "intlayer-editor": "canary",
     "@types/node": "25.0.10",
     "tailwindcss": "^4.1.13",
     "typescript": "~5.9.2",
