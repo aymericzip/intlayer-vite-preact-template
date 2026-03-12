@@ -10,19 +10,19 @@
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "8.3.0-canary.4",
+    "intlayer": "latest",
     "preact": "^10.27.2",
-    "preact-intlayer": "8.3.0-canary.4",
+    "preact-intlayer": "latest",
     "preact-iso": "^2.10.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
     "@tailwindcss/vite": "^4.1.13",
-    "intlayer-editor": "8.3.0-canary.4",
+    "intlayer-editor": "latest",
     "@types/node": "25.0.10",
     "tailwindcss": "^4.1.13",
     "typescript": "~5.9.2",
     "vite": "^7.1.6",
-    "vite-intlayer": "8.3.0-canary.4"
+    "vite-intlayer": "latest"
   }
 }
