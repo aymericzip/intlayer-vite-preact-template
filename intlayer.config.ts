@@ -11,7 +11,7 @@ const config: IntlayerConfig = {
     defaultLocale: Locales.ENGLISH,
   },
   editor: {
-    enabled: true,
+    enabled: false,
     applicationURL: "http://localhost:5173",
     cmsURL: "http://localhost:3000",
     editorURL: "http://localhost:8000",
@@ -19,7 +19,11 @@ const config: IntlayerConfig = {
     clientId: process.env.INTLAYER_CLIENT_ID,
     clientSecret: process.env.INTLAYER_CLIENT_SECRET,
   },
+  dictionary: {
+    importMode: "dynamic",
+  },
   build: {
+    optimize: true,
     // optimize: true, // Enable babel macro dictionary replacement for bundle size optimization (default: process.env.NODE_ENV === "production")
     // activateDynamicImport: true, // Enable dynamic import for dictionaries. Will make intervince suspense for loading dictionaries
   },

@@ -1,7 +1,7 @@
 import { localeMap } from "intlayer";
-import { IntlayerProvider } from "preact-intlayer";
-import { LocationProvider, Router, Route } from "preact-iso";
 import type { ComponentChildren, FunctionalComponent } from "preact";
+import { IntlayerProvider } from "preact-intlayer";
+import { LocationProvider, Route, Router } from "preact-iso";
 
 /**
  * A router component that sets up locale-specific routes.
@@ -12,14 +12,17 @@ export const LocaleRouter: FunctionalComponent<{
 }> = ({ children }) => (
   <LocationProvider>
     <Router>
-      {localeMap(({ locale, urlPrefix }) => (
-        <Route
-          path={`${urlPrefix}/:rest*`}
-          component={() => (
-            <IntlayerProvider locale={locale}>{children}</IntlayerProvider>
-          )}
-        />
-      ))}
+      {localeMap(({ locale, urlPrefix }) => ({ locale, urlPrefix }))
+        .sort((a, b) => b.urlPrefix.length - a.urlPrefix.length)
+        .map(({ locale, urlPrefix }) => (
+          <Route
+            key={locale}
+            path={`${urlPrefix}/:rest*`}
+            component={() => (
+              <IntlayerProvider locale={locale}>{children}</IntlayerProvider>
+            )}
+          />
+        ))}
     </Router>
   </LocationProvider>
 );
