@@ -6,6 +6,10 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: {
+    minify: false,
+    sourcemap: true,
+  },
   plugins: [
     preact(),
     intlayer(),
@@ -20,7 +24,4 @@ export default defineConfig({
       sourcemap: true, // CRITICAL: Uses sourcemaps to calculate exact minified sizes
     }),
   ],
-  build: {
-    sourcemap: true,
-  },
 });

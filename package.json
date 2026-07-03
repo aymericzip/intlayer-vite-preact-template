@@ -4,26 +4,26 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "latest",
+    "intlayer": "9.0.0-canary.12",
     "preact": "^10.29.0",
-    "preact-intlayer": "latest",
+    "preact-intlayer": "9.0.0-canary.12",
     "preact-iso": "^2.11.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.5",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "25.5.0",
-    "intlayer-editor": "latest",
+    "intlayer-editor": "9.0.0-canary.12",
     "rollup-plugin-visualizer": "^7.0.1",
     "tailwindcss": "^4.2.2",
     "typescript": "~6.0.2",
-    "vite": "^8.0.2",
-    "vite-intlayer": "latest"
+    "vite": "^8.0.3",
+    "vite-intlayer": "9.0.0-canary.12"
   }
 }

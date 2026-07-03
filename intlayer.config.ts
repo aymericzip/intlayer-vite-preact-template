@@ -22,6 +22,7 @@ const config: IntlayerConfig = {
   dictionary: {
     importMode: "dynamic",
   },
+  log: { mode: "verbose" },
   build: {
     optimize: true,
     // optimize: true, // Enable babel macro dictionary replacement for bundle size optimization (default: process.env.NODE_ENV === "production")
