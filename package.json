@@ -10,20 +10,20 @@
     "start:editor": "intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "canary",
+    "intlayer": "latest",
     "preact": "^10.29.4",
-    "preact-intlayer": "canary",
+    "preact-intlayer": "latest",
     "preact-iso": "^2.12.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.5",
     "@tailwindcss/vite": "^4.3.2",
     "@types/node": "26.1.0",
-    "intlayer-editor": "canary",
+    "intlayer-editor": "latest",
     "rollup-plugin-visualizer": "^7.0.1",
     "tailwindcss": "^4.3.2",
     "typescript": "~6.0.3",
     "vite": "^8.1.3",
-    "vite-intlayer": "canary"
+    "vite-intlayer": "latest"
   }
 }
